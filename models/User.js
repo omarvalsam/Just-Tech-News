@@ -67,18 +67,12 @@ User.init(
         return updatedUserData;
       },
     },
-    // TABLE CONFIGURATIONS OPTIONS GO HERE (https://sequelize.org/v5/manual/models-definition.html#configuration))
 
-    // pass in our imported sequelize connection (the direct connection to our database)
     sequelize,
-    // don't automatically create createdAt/updatedAt timestamp fields
     timestamps: false,
-    // don't pluralize name of database table
     FreezeTableName: true,
-    // user underscores instead of camel-casing (i.e. `comment_text` and not `commentText`)
     underscored: true,
     tableName: "user",
-    // make it so our model name stays lowercase in the database
     modelName: "user",
   }
 );

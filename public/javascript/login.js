@@ -13,7 +13,6 @@ async function loginFormHandler(event) {
       }),
       headers: { "Content-Type": "application/json" },
     });
-
     if (response.ok) {
       document.location.replace("/");
     } else {
@@ -39,9 +38,8 @@ async function signupFormHandler(event) {
       }),
       headers: { "Content-Type": "application/json" },
     });
-
     if (response.ok) {
-      document.location.replace("/");
+      console.log("success");
     } else {
       alert(response.statusText);
     }
